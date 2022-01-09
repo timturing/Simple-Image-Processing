@@ -13,7 +13,7 @@ Rcpp::Rostream<false>& Rcpp::Rcerr = Rcpp::Rcpp_cerr_get();
 
 // image_Compression
 arma::mat image_Compression(arma::mat img, int num);
-RcppExport SEXP _SIR_image_Compression(SEXP imgSEXP, SEXP numSEXP) {
+RcppExport SEXP _SIP_image_Compression(SEXP imgSEXP, SEXP numSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -25,7 +25,7 @@ END_RCPP
 }
 // image_Edging
 arma::mat image_Edging(arma::mat img);
-RcppExport SEXP _SIR_image_Edging(SEXP imgSEXP) {
+RcppExport SEXP _SIP_image_Edging(SEXP imgSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -36,7 +36,7 @@ END_RCPP
 }
 // image_Sharpening
 arma::mat image_Sharpening(arma::mat img);
-RcppExport SEXP _SIR_image_Sharpening(SEXP imgSEXP) {
+RcppExport SEXP _SIP_image_Sharpening(SEXP imgSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -47,7 +47,7 @@ END_RCPP
 }
 // randomEncryption
 Rcpp::List randomEncryption(arma::mat img);
-RcppExport SEXP _SIR_randomEncryption(SEXP imgSEXP) {
+RcppExport SEXP _SIP_randomEncryption(SEXP imgSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -58,7 +58,7 @@ END_RCPP
 }
 // randomDecryption
 arma::mat randomDecryption(arma::mat img, arma::Mat<int> key);
-RcppExport SEXP _SIR_randomDecryption(SEXP imgSEXP, SEXP keySEXP) {
+RcppExport SEXP _SIP_randomDecryption(SEXP imgSEXP, SEXP keySEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -70,7 +70,7 @@ END_RCPP
 }
 // simpleEncryption
 arma::mat simpleEncryption(arma::mat source, arma::mat mask, double percent);
-RcppExport SEXP _SIR_simpleEncryption(SEXP sourceSEXP, SEXP maskSEXP, SEXP percentSEXP) {
+RcppExport SEXP _SIP_simpleEncryption(SEXP sourceSEXP, SEXP maskSEXP, SEXP percentSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -83,7 +83,7 @@ END_RCPP
 }
 // simpleDecryption
 arma::mat simpleDecryption(arma::mat img, arma::mat mask, double percent);
-RcppExport SEXP _SIR_simpleDecryption(SEXP imgSEXP, SEXP maskSEXP, SEXP percentSEXP) {
+RcppExport SEXP _SIP_simpleDecryption(SEXP imgSEXP, SEXP maskSEXP, SEXP percentSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -96,7 +96,7 @@ END_RCPP
 }
 // simpleEnhancement
 arma::mat simpleEnhancement(arma::mat img, double k, double b);
-RcppExport SEXP _SIR_simpleEnhancement(SEXP imgSEXP, SEXP kSEXP, SEXP bSEXP) {
+RcppExport SEXP _SIP_simpleEnhancement(SEXP imgSEXP, SEXP kSEXP, SEXP bSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -109,18 +109,18 @@ END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
-    {"_SIR_image_Compression", (DL_FUNC) &_SIR_image_Compression, 2},
-    {"_SIR_image_Edging", (DL_FUNC) &_SIR_image_Edging, 1},
-    {"_SIR_image_Sharpening", (DL_FUNC) &_SIR_image_Sharpening, 1},
-    {"_SIR_randomEncryption", (DL_FUNC) &_SIR_randomEncryption, 1},
-    {"_SIR_randomDecryption", (DL_FUNC) &_SIR_randomDecryption, 2},
-    {"_SIR_simpleEncryption", (DL_FUNC) &_SIR_simpleEncryption, 3},
-    {"_SIR_simpleDecryption", (DL_FUNC) &_SIR_simpleDecryption, 3},
-    {"_SIR_simpleEnhancement", (DL_FUNC) &_SIR_simpleEnhancement, 3},
+    {"_SIP_image_Compression", (DL_FUNC) &_SIP_image_Compression, 2},
+    {"_SIP_image_Edging", (DL_FUNC) &_SIP_image_Edging, 1},
+    {"_SIP_image_Sharpening", (DL_FUNC) &_SIP_image_Sharpening, 1},
+    {"_SIP_randomEncryption", (DL_FUNC) &_SIP_randomEncryption, 1},
+    {"_SIP_randomDecryption", (DL_FUNC) &_SIP_randomDecryption, 2},
+    {"_SIP_simpleEncryption", (DL_FUNC) &_SIP_simpleEncryption, 3},
+    {"_SIP_simpleDecryption", (DL_FUNC) &_SIP_simpleDecryption, 3},
+    {"_SIP_simpleEnhancement", (DL_FUNC) &_SIP_simpleEnhancement, 3},
     {NULL, NULL, 0}
 };
 
-RcppExport void R_init_SIR(DllInfo *dll) {
+RcppExport void R_init_SIP(DllInfo *dll) {
     R_registerRoutines(dll, NULL, CallEntries, NULL, NULL);
     R_useDynamicSymbols(dll, FALSE);
 }
