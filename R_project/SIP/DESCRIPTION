@@ -1,0 +1,11 @@
+Package: SIP
+Type: Package
+Title: Simple Image Processing
+Version: 1.0
+Date: 2021-12-19
+Author: Wenqi Lv, Wenyang Luo
+Maintainer: Wenqi Lv<1776643940@qq.com>,Wenyang Luo<584502139@qq.com>
+Description: Actually this is just the final homework of one of our courses, so if you are searching for something **useful** to process the image,please find **other packages!!!** This is a package for some basic processing for image, such as Image Blurring, Image Compression and so on.And we'll just deal with matrix, so please download other packages to make it easier to do what you want.
+License: MIT
+Imports: Rcpp (>= 1.0.7)
+LinkingTo: Rcpp, RcppArmadillo
